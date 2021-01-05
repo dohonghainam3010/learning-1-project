@@ -29,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
       <workItem from="1609742633596" duration="239000" />
       <workItem from="1609742885087" duration="334000" />
       <workItem from="1609769228481" duration="8755000" />
-      <workItem from="1609862109406" duration="2191000" />
+      <workItem from="1609862109406" duration="3011000" />
     </task>
     <task id="LOCAL-00001" summary="add css file">
       <created>1609742992935</created>
