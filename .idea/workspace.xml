@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:develop" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c293d691-7b76-4b30-ac12-b41513984816" name="Default Changelist" comment="add webpack config">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="c293d691-7b76-4b30-ac12-b41513984816" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +49,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1mardl0uPEKA24emeGryoh8Q5jd" />
   <component name="ProjectViewState">
@@ -61,6 +86,7 @@
       <workItem from="1609742633596" duration="239000" />
       <workItem from="1609742885087" duration="334000" />
       <workItem from="1609769228481" duration="8755000" />
+      <workItem from="1609862109406" duration="269000" />
     </task>
     <task id="LOCAL-00001" summary="add css file">
       <created>1609742992935</created>
@@ -76,11 +102,42 @@
       <option name="project" value="LOCAL" />
       <updated>1609776775060</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add webpack config">
+      <created>1609829039372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609829039372</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add css file" />
@@ -88,27 +145,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="add webpack config" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1609778403469">
+    <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1609829028742">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state x="297" y="23" key="CommitChangelistDialog2/1440.-53.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609742992848" />
+    <state x="297" y="23" key="CommitChangelistDialog2/1440.-53.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609829028742" />
     <state x="297" y="23" key="CommitChangelistDialog2/1440.23.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609778403469" />
-    <state x="144" y="95" key="DiffContextDialog" timestamp="1609776760448">
+    <state x="144" y="95" key="DiffContextDialog" timestamp="1609828982282">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
+    <state x="144" y="95" key="DiffContextDialog/1440.-53.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609828982282" />
     <state x="144" y="95" key="DiffContextDialog/1440.23.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609776760448" />
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1609777811746">
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1609829043071">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state x="320" y="174" key="Vcs.Push.Dialog.v2/1440.-53.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609743143995" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/1440.-53.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609829043071" />
     <state x="320" y="174" key="Vcs.Push.Dialog.v2/1440.23.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609777811746" />
     <state x="499" y="97" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1609778388283">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="499" y="97" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/1440.23.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609778388283" />
-    <state x="516" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609771026003">
+    <state x="516" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609828931038">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
+    <state x="516" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1440.-53.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609828931038" />
     <state x="516" y="355" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1440.23.1920.1057/0.23.1440.830@0.23.1440.830" timestamp="1609771026003" />
     <state x="385" y="177" width="670" height="676" key="search.everywhere.popup" timestamp="1609774635340">
       <screen x="0" y="23" width="1440" height="830" />
