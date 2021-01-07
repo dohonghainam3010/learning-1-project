@@ -67,8 +67,7 @@ const findComponentPath = (path, routes) => routes.find(r => r.path.match(new Re
 
 const router = () => {
   const path = parseLocation();
-  const { component = ErrorComponent } = findComponentPath(path, routes ) || {};
-  document.getElementById('app').innerHTML = component.render()
+  const { component = ErrorComponent } = findComponentPath(path, routes) || {};
 }
 
 const parseLocation = () => location.hash.slice(1).toLowerCase() || '/';
