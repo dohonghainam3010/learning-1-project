@@ -1,3 +1,3 @@
-import './style.css';
+import './style.css'
 import './test.js';
 import './main.js';

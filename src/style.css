@@ -12,7 +12,7 @@ body {
     width: 360px;
     height: 400px;
     margin: 8% auto;
-    background: #fff;
+    background: red;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -20,7 +20,7 @@ body {
 h3 {
     text-align: center;
     margin-bottom: 40px;
-    color: #777; 
+    color: #777;
 }
 .container form {
     width: 280px;
@@ -28,7 +28,7 @@ h3 {
     top: 100px;
     left: 40px;
     transition: 0.5s;
-    
+
 }
 form input {
     width: 100%;
