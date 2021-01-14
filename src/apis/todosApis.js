@@ -46,3 +46,13 @@ export const createTodo = (data) => {
   })
 }
 
+export const deleteTodo = (todoId) => {
+  return new Promise(res => {
+    fetch(`https://5ff6f759e7164b0017e19f4b.mockapi.io/todo/v1/todo/${todoId}`, {
+      method: 'DELETE',
+    })
+        .then((response) => response.json())
+        .then(json => res(json))
+  })
+}
+

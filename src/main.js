@@ -1,4 +1,6 @@
-import { createTodo, getAllTodos, editTodo, getTodoDetail } from './apis/todosApis'
+import { createTodo, getAllTodos, editTodo, getTodoDetail, deleteTodo } from './apis/todosApis'
+
+let data = []
 
 function onEditTodo (todo) {
     todoDetailWrapper.innerHTML = `
@@ -12,70 +14,68 @@ function onEditTodo (todo) {
       </div>`
 }
 
-const wrapper = document.getElementById('app')
+async function onDeleteTodo(todo) {
+    try {
+        await deleteTodo(todo.id)
+        data = await getAllTodos()
+        renderTodos(data)
+        selectTodoActionBtn()
+    } catch(e) {
+        console.log(e)
+    }
+}
+
+async function getAllTodo() {
+    try {
+        data = await getAllTodos()
+        renderTodos(data)
+        selectTodoActionBtn()
+    } catch(e){
+        console.log(e)
+    }
+}
+
+function selectTodoActionBtn() {
+    const editButtons = document.querySelectorAll('.edit-btn')
+    const deleteButtons = document.querySelectorAll('.delete-btn')
+    editButtons.forEach((button, index) => {
+        button.addEventListener('click', () => onEditTodo(data[index]))
+    })
+
+    deleteButtons.forEach((button, index) => {
+        button.addEventListener('click', () => onDeleteTodo(data[index]))
+    })
+}
+
+const todoWrapper = document.getElementById('todo-list')
 const todoDetailWrapper = document.getElementById('todo-detail')
 
 const renderTodos = (data) => {
+    todoWrapper.innerHTML = ''
     if(data) {
         data.forEach(todo => {
             const todoRender =
             `<div class="todo-wrapper">
-              <span>id: ${ todo.id }</span>  
-              <span>name: ${ todo.name }</span>  
-              <span>description: ${ todo.description }</span>  
-              <span>start at: ${ todo.start_time }</span>  
-              <span>end at: ${ todo.end_time }</span>  
-              <button class="edit-btn">Edit</button>
+              <div class="todo-info">
+                <span>id: ${ todo.id }</span>    
+                <span>name: ${ todo.name }</span>  
+                <span>description: ${ todo.description }</span>  
+                <span>start at: ${ todo.start_time }</span>  
+                <span>end at: ${ todo.end_time }</span>
+              </div>
+              <div class="todo-action">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
             </div>`
-            wrapper.innerHTML += todoRender
+            todoWrapper.innerHTML += todoRender
         })
-        return wrapper
+        return todoWrapper
     }
 }
 
 
 window.onload = async () => {
-    const data = await getAllTodos();
-    renderTodos(data)
-    const buttons = document.querySelectorAll('.edit-btn')
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', () => onEditTodo(data[index]))
-    })
-    // const buttons = document.querySelectorAll('.edit-btn')
-    // buttons.forEach(button => {
-    //     button.addEventListener('click', onEditTodo)
-    // })
-
-    // var form1 = document.getElementById('form1');
-    // var form2 = document.getElementById('form2');
-    // var form3 = document.getElementById('form3');
-    //
-    // var next1 = document.getElementById('Next1');
-    // var next2 = document.getElementById('Next2');
-    // var back1 = document.getElementById('Back1');
-    // var back2 = document.getElementById('Back2');
-    // var progress = document.getElementById('progress');
-
-    // next1.onclick = function () {
-    //     form1.style.left = "-450px";
-    //     form2.style.left = "40px";
-    //     progress.style.width = "240px";
-    // }
-    // back1.onclick = function () {
-    //     form1.style.left = "40px";
-    //     form2.style.left = "450px";
-    //     progress.style.width = "120px";
-    // }
-    //
-    // next2.onclick = function () {
-    //     form2.style.left = "-450px";
-    //     form3.style.left = "40px";
-    //     progress.style.width = "360px";
-    // }
-    // back2.onclick = function () {
-    //     form2.style.left = "40px";
-    //     form3.style.left = "450px";
-    //     progress.style.width = "240px";
-    // }
+    await getAllTodo()
 }
 
