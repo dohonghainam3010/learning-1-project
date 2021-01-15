@@ -11,18 +11,18 @@
   <div id="app">
     <div id="todo-list"></div>
     <div id="form-wrapper">
-      <form action="" id="todo-form" method="post">
+      <form id="todo-form">
         <label for="name">Todo name:</label>
-        <input type="text" id="name" />
+        <input type="text" name="name" id="name" />
         <label for="description">Todo description:</label>
-        <input type="text" id="description" />
+        <input type="text" name="description" id="description" />
         <label for="start_time">Start At:</label>
-        <input type="date" id="start_time" />
+        <input type="date" name="start_time" id="start_time" />
         <label for="end_time">End At:</label>
-        <input type="date" id="end_time" />
-        <label for="avatar">End At:</label>
-        <input type="text" id="avatar" />
-        <button type="submit" id="create-todo">Create</button>
+        <input type="date" name="end_time" id="end_time" />
+        <label for="avatar">Avatar:</label>
+        <input type="text" name="avatar" id="avatar" />
+        <button type="submit">Create</button>
       </form>
     </div>
   </div>
