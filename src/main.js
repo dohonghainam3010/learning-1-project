@@ -5,12 +5,19 @@ let data = []
 function onEditTodo (todo) {
     todoDetailWrapper.innerHTML = `
       <div>
-        <span>id: ${todo.id}</span>
-        <span>name: ${todo.name}</span>
-        <span>description: ${todo.description}</span>
-        <span>start_at: ${todo.start_at}</span>
-        <span>end_at: ${todo.end_at}</span>
-        <span>avatar: ${todo.avatar}</span>
+        <form id="edit-todo">
+            <label for="name">Todo name:</label>
+            <input type="text" name="name" value="${todo.name}"/>
+            <label for="description">Todo description:</label>
+            <input type="text" name="description" value="${todo.description}"/>
+            <label for="start_time">Start At:</label>
+            <input type="date" name="start_time" value="${todo.start_time}"/>
+            <label for="end_time">End At:</label>
+            <input type="date" name="end_time" value="${todo.end_time}"/>
+            <label for="avatar">Avatar:</label>
+            <input type="text" name="avatar" value="${todo.avatar}"/>
+            <button type="submit">Submit</button>
+        </form>
       </div>`
 }
 
