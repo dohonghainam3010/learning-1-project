@@ -2,9 +2,10 @@ import { createTodo, getAllTodos, editTodo, getTodoDetail, deleteTodo } from './
 
 let data = []
 
-function onEditTodo (todo) {
+function openEditTodoForm (todo) {
     todoDetailWrapper.innerHTML = `
       <div>
+        <h2>Edit</h2>
         <form id="edit-todo">
             <label for="name">Todo name:</label>
             <input type="text" name="name" value="${todo.name}"/>
@@ -19,6 +20,8 @@ function onEditTodo (todo) {
             <button type="submit">Submit</button>
         </form>
       </div>`
+    const editForm = document.querySelector('#edit-todo')
+    editForm.addEventListener('submit', (e) => onEditTodo(e, todo.id))
 }
 
 async function onDeleteTodo(todo) {
@@ -44,16 +47,40 @@ async function getAllTodo() {
 
 async function onCreateTodo(e) {
     e.preventDefault();
-    const data = new FormData(e.target);
-    const value = Object.fromEntries(data.entries())
-    await createTodo(value)
+    const formData = new FormData(e.target);
+    const value = Object.fromEntries(formData.entries())
+    try {
+        await createTodo(value)
+        data = await getAllTodos()
+        renderTodos(data)
+        selectTodoActionBtn()
+    } catch(e) {
+        console.log(e)
+    }
+}
+
+async function onEditTodo(e, todoId) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const value = Object.fromEntries(formData.entries());
+    try {
+        await editTodo(value, todoId)
+        data = await getAllTodos()
+        renderTodos(data)
+        selectTodoActionBtn()
+    } catch(e) {
+        console.log(e)
+    } finally {
+        todoDetailWrapper.innerHTML = ''
+    }
+
 }
 
 function selectTodoActionBtn() {
     const editButtons = document.querySelectorAll('.edit-btn')
     const deleteButtons = document.querySelectorAll('.delete-btn')
     editButtons.forEach((button, index) => {
-        button.addEventListener('click', () => onEditTodo(data[index]))
+        button.addEventListener('click', () => openEditTodoForm(data[index]))
     })
 
     deleteButtons.forEach((button, index) => {
