@@ -49,6 +49,8 @@ async function onCreateTodo(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const value = Object.fromEntries(formData.entries())
+    value.start_time = Date.parse(`${value.start_time}`)
+    value.end_time = Date.parse(`${value.end_time}`)
     try {
         await createTodo(value)
         data = await getAllTodos()
@@ -96,14 +98,16 @@ const renderTodos = (data) => {
     todoWrapper.innerHTML = ''
     if(data) {
         data.forEach(todo => {
+            const startTime = new Date(todo.start_time * 1000).toLocaleString()
+            const endTime = new Date(todo.end_time * 1000).toLocaleString()
             const todoRender =
             `<div class="todo-wrapper">
               <div class="todo-info">
                 <span>id: ${ todo.id }</span>    
                 <span>name: ${ todo.name }</span>  
                 <span>description: ${ todo.description }</span>  
-                <span>start at: ${ todo.start_time }</span>  
-                <span>end at: ${ todo.end_time }</span>
+                <span>start at: ${ startTime }</span>  
+                <span>end at: ${ endTime }</span>
               </div>
               <div class="todo-action">
                   <button class="edit-btn">Edit</button>
