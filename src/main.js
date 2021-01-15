@@ -35,6 +35,11 @@ async function getAllTodo() {
     }
 }
 
+async function onCreateTodo() {
+    const formData =  new FormData(todoForm)
+    console.log(formData)
+}
+
 function selectTodoActionBtn() {
     const editButtons = document.querySelectorAll('.edit-btn')
     const deleteButtons = document.querySelectorAll('.delete-btn')
@@ -48,6 +53,8 @@ function selectTodoActionBtn() {
 }
 
 const todoWrapper = document.getElementById('todo-list')
+const todoForm = document.forms['todo-form']
+const createTodoBtn = document.getElementById('create-todo')
 const todoDetailWrapper = document.getElementById('todo-detail')
 
 const renderTodos = (data) => {
@@ -77,5 +84,6 @@ const renderTodos = (data) => {
 
 window.onload = async () => {
     await getAllTodo()
+    createTodoBtn.addEventListener('click', () => onCreateTodo)
 }
 
